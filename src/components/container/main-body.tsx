@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { PanelWrapper } from "../common/panel-wrapper";
 import { SearchField } from "../search-field";
-import MainImage from "../../assets/mainImage.png";
+import MainImage from "../../assets/Team.jpg";
 import { CategoriesList } from "../categories-list";
 import { GameCardWrapper } from "../common/game-card-wrapper";
 
