@@ -11,9 +11,8 @@ export const Footer = () => {
       flexDirection="column"
       p={1}
     >
-      <Typography>Site Map | Terms & Conditions</Typography>
-      <Typography>Board Game Guru</Typography>
-      <Typography>07834281383</Typography>
+      <Typography>GameRodGuru</Typography>
+      <Typography>Phone: +447487855376</Typography>
     </Grid>
   );
 };

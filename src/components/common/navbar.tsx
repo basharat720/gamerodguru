@@ -4,13 +4,17 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import { Link as RouterLink } from "react-router-dom";
 
 const pages = [
-  "View Cart",
-  "Checkout",
-  "FAQs",
-  "Contact Us",
-  "Terms & Conditions & Shipping",
+  { title: "View Cart", page: "viewCart" },
+  { title: "Checkout", page: "checkout" },
+  { title: "FAQs", page: "faqs" },
+  { title: "Contact Us", page: "contactUs" },
+  {
+    title: "Terms & Conditions & Shipping",
+    page: "termsAndConditionsAndShipping",
+  },
 ];
 
 export const Navbar = () => {
@@ -32,9 +36,9 @@ export const Navbar = () => {
             {pages.map((page, index) => (
               <>
                 <Button
-                  key={page}
-                  // to={`/${page.toLowerCase()}`}
-                  // component={RouterLink}
+                  key={page.title}
+                  to={`/${page.page.toLowerCase()}`}
+                  component={RouterLink}
                   sx={{
                     color: "black",
                     textTransform: "none",
@@ -42,7 +46,7 @@ export const Navbar = () => {
                     fontWeight: "bold",
                   }}
                 >
-                  {page}
+                  {page.title}
                 </Button>
                 {index !== pages.length - 1 && "|"}
               </>
